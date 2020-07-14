@@ -10,7 +10,7 @@ This project is about a shortwave trasmitter with SI5351 oscillator from Silicon
 
 1. [Preface]()
 2. [Schematic]()
-3. [Arduino Schetch]()
+3. [Arduino Sketch]()
 4. [References]()
 
 
