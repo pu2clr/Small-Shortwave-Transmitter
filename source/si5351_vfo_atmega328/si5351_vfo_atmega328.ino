@@ -55,8 +55,8 @@
 // Change this value bellow  (CORRECTION_FACTOR) to 0 if you do not know the correction factor of your Si5351A.
 #define CORRECTION_FACTOR 80000 // See how to calibrate your Si5351A (0 if you do not want).
 
-// VFO range for this project is 3000 KHz to 30000 KHz.
-#define DEFAULT_VFO 800000000LU // BFO center frequency
+// VFO range for this project is 3000 KHz to 30000 KHz (3MHz to 30MHz).
+#define DEFAULT_VFO 800000000LU // VFO center frequency
 #define MIN_VFO 300000000LU     // VFO min. frequency 3Mhz
 #define MAX_VFO 3000000000LU    // VFO max. frequency 30MHz
 
@@ -84,7 +84,7 @@ Step step[] = {
     {"5KHz ", 500000}}; // Maximum frequency step 5Khz
 
 // Calculate the index of last position of step[] array
-const int lastStepBFO = (sizeof step / sizeof(Step)) - 1;
+const int lastStepVFO = (sizeof step / sizeof(Step)) - 1;
 volatile long currentStep = 0;
 
 bool isFreqChanged = true;
@@ -110,12 +110,13 @@ void setup()
   display.setFont(Adafruit5x7);
   display.set2X();
   display.clear();
-  display.print("\nVFO SW TRANS");
+  display.print("\nShortwave");
+  display.print("\nTransmitter");
   display.print("\n\nBY PU2CLR");
 
   delay(3000);
   display.clear();
-  displayDial();
+  showStatus();
   // Initiating the Signal Generator (si5351)
   si5351.init(SI5351_CRYSTAL_LOAD_8PF, 0, 0);
   // Adjusting the frequency (see how to calibrate the Si5351 - example si5351_calibration.ino)
@@ -156,8 +157,11 @@ void rotaryEncoder()
 
 // Show Signal Generator Information
 // Verificar setCursor() em https://github.com/greiman/SSD1306Ascii/issues/53
-void displayDial()
+void showStatus()
 {
+
+
+
   double vfo = vfoFreq / 100000.0;
 
   // display.setCursor(0,0)
@@ -177,7 +181,7 @@ void displayDial()
 void changeFreq(int direction)
 {
   vfoFreq += step[currentStep].value * direction; // currentStep * direction;
-  // Check the BFO limits
+  // Check the VFO limits
   if (vfoFreq > MAX_VFO )
     vfoFreq = MIN_VFO;
   else if (vfoFreq < MIN_VFO)
@@ -198,13 +202,15 @@ void loop()
     encoderCount = 0;
   }
 
-  if (digitalRead(BUTTON_STEP) == LOW)
-    currentStep = (currentStep < lastStepBFO) ? (currentStep + 1) : 0;
+  if (digitalRead(BUTTON_STEP) == LOW) {
+    currentStep = (currentStep < lastStepVFO) ? (currentStep + 1) : 0;
+    showStatus();
+  }
 
   if (isFreqChanged)
   {
     si5351.set_freq(vfoFreq, SI5351_CLK0);
-    displayDial();
+    showStatus();
     isFreqChanged = false;
   }
   delay(50);
