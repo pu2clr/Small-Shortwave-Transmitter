@@ -41,7 +41,7 @@ The schematic below is based on [Stefan0719](https://youtu.be/7fe_GlJI5WI) and c
 If you intend to work with random frequencies between 3 and 30 MHz, use the following circuit
 
 
-![SI5351 Sortwave transmitter - Basic Schematic](extras/images/schematic_transmitter_crystal.png)
+![SI5351 Sortwave transmitter - Basic Schematic](extras/images/schematic_transmitter_si5351.png)
 
 
 The sketch for the circuit above can be found [here](source)
@@ -53,4 +53,3 @@ The sketch for the circuit above can be found [here](source)
 2. [Simple shortwave transmitter](https://youtu.be/7fe_GlJI5WI)
 3. [DIY Simple Short Wave Transmitter With XTAL Oscillator Steady Frequency](https://youtu.be/4UGzL5FCcMM)
 4. [13.56Mhz shortwave transmitter](https://youtu.be/VYizasHR564)
-5. 
