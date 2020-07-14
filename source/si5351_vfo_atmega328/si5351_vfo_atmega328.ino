@@ -159,9 +159,6 @@ void rotaryEncoder()
 // Verificar setCursor() em https://github.com/greiman/SSD1306Ascii/issues/53
 void showStatus()
 {
-
-
-
   double vfo = vfoFreq / 100000.0;
 
   // display.setCursor(0,0)
@@ -185,7 +182,7 @@ void changeFreq(int direction)
   if (vfoFreq > MAX_VFO )
     vfoFreq = MIN_VFO;
   else if (vfoFreq < MIN_VFO)
-    vfoFreq = MIN_VFO;
+    vfoFreq = MAX_VFO;
 
   isFreqChanged = true;
 }
