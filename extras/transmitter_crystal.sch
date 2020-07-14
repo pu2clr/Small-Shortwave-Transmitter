@@ -5130,7 +5130,9 @@ The Slot footprint only works if the mill layer is transmitted to the PCB fab ho
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CX" device="XC10B6" package3d_urn="urn:adsk.eagle:package:23700/1" value="100nF"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R5" library="Resistor" library_urn="urn:adsk.eagle:library:16378527" deviceset="R-US" device="AXIAL-7.2MM-PITCH" package3d_urn="urn:adsk.eagle:package:16378561/2" technology="_" value="1K"/>
-<part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VCC" device=""/>
+<part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VCC" device="">
+<attribute name="VCC" value="9V"/>
+</part>
 <part name="C4" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="100UF-POLAR" device="-10X10.5-63V-20%" package3d_urn="urn:adsk.eagle:package:37417/1" value="100uF"/>
 <part name="INPUT" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="POWER_JACK" device="PTH_SMD_COMBO" package3d_urn="urn:adsk.eagle:package:38223/1"/>
 <part name="ANT1" library="discrete" library_urn="urn:adsk.eagle:library:211" deviceset="ANTENNA" device="" package3d_urn="urn:adsk.eagle:package:12928/1"/>
@@ -5186,7 +5188,7 @@ The Slot footprint only works if the mill layer is transmitted to the PCB fab ho
 <attribute name="VALUE" x="39.878" y="73.66" size="1.778" layer="96" rot="R270" align="center"/>
 </instance>
 <instance part="SUPPLY1" gate="G$1" x="43.18" y="83.82" smashed="yes">
-<attribute name="VALUE" x="41.275" y="86.995" size="1.778" layer="96"/>
+<attribute name="VCC" x="38.1" y="86.36" size="1.778" layer="96"/>
 </instance>
 <instance part="C4" gate="G$1" x="2.54" y="53.34" smashed="yes">
 <attribute name="NAME" x="-1.524" y="56.515" size="1.778" layer="95" font="vector"/>
