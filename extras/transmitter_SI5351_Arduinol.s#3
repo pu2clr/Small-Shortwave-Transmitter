@@ -4160,6 +4160,133 @@ Footprint with angle programming connector</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="SI5351B-B-GM">
+<packages>
+<package name="QFN50P400X400X90-21N">
+<rectangle x1="-1.09" y1="0.13" x2="-0.13" y2="1.09" layer="31"/>
+<rectangle x1="-1.09" y1="-1.09" x2="-0.13" y2="-0.13" layer="31" rot="R90"/>
+<rectangle x1="0.13" y1="-1.09" x2="1.09" y2="-0.13" layer="31" rot="R180"/>
+<rectangle x1="0.13" y1="0.13" x2="1.09" y2="1.09" layer="31" rot="R270"/>
+<wire x1="-2" y1="2" x2="2" y2="2" width="0.127" layer="51"/>
+<wire x1="2" y1="2" x2="2" y2="-2" width="0.127" layer="51"/>
+<wire x1="2" y1="-2" x2="-2" y2="-2" width="0.127" layer="51"/>
+<wire x1="-2" y1="-2" x2="-2" y2="2" width="0.127" layer="51"/>
+<wire x1="-2" y1="1.5" x2="-2" y2="2" width="0.127" layer="21"/>
+<wire x1="-2" y1="2" x2="-1.5" y2="2" width="0.127" layer="21"/>
+<wire x1="1.5" y1="2" x2="2" y2="2" width="0.127" layer="21"/>
+<wire x1="2" y1="2" x2="2" y2="1.5" width="0.127" layer="21"/>
+<wire x1="2" y1="-1.5" x2="2" y2="-2" width="0.127" layer="21"/>
+<wire x1="2" y1="-2" x2="1.5" y2="-2" width="0.127" layer="21"/>
+<wire x1="-1.5" y1="-2" x2="-2" y2="-2" width="0.127" layer="21"/>
+<wire x1="-2" y1="-2" x2="-2" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-2.61" y1="2.61" x2="2.61" y2="2.61" width="0.05" layer="39"/>
+<wire x1="2.61" y1="2.61" x2="2.61" y2="-2.61" width="0.05" layer="39"/>
+<wire x1="2.61" y1="-2.61" x2="-2.61" y2="-2.61" width="0.05" layer="39"/>
+<wire x1="-2.61" y1="-2.61" x2="-2.61" y2="2.61" width="0.05" layer="39"/>
+<text x="-2" y="2.74" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2" y="-4" size="1.27" layer="27">&gt;VALUE</text>
+<circle x="-2.9" y="1.1" radius="0.1" width="0.2" layer="21"/>
+<circle x="-2.9" y="1.1" radius="0.1" width="0.2" layer="51"/>
+<smd name="1" x="-1.95" y="1" dx="0.81" dy="0.27" layer="1" roundness="50"/>
+<smd name="2" x="-1.95" y="0.5" dx="0.81" dy="0.27" layer="1" roundness="50"/>
+<smd name="3" x="-1.95" y="0" dx="0.81" dy="0.27" layer="1" roundness="50"/>
+<smd name="4" x="-1.95" y="-0.5" dx="0.81" dy="0.27" layer="1" roundness="50"/>
+<smd name="5" x="-1.95" y="-1" dx="0.81" dy="0.27" layer="1" roundness="50"/>
+<smd name="6" x="-1" y="-1.95" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R90"/>
+<smd name="7" x="-0.5" y="-1.95" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R90"/>
+<smd name="8" x="0" y="-1.95" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R90"/>
+<smd name="9" x="0.5" y="-1.95" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R90"/>
+<smd name="10" x="1" y="-1.95" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R90"/>
+<smd name="11" x="1.95" y="-1" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R180"/>
+<smd name="12" x="1.95" y="-0.5" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R180"/>
+<smd name="13" x="1.95" y="0" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R180"/>
+<smd name="14" x="1.95" y="0.5" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R180"/>
+<smd name="15" x="1.95" y="1" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R180"/>
+<smd name="16" x="1" y="1.95" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R270"/>
+<smd name="17" x="0.5" y="1.95" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R270"/>
+<smd name="18" x="0" y="1.95" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R270"/>
+<smd name="19" x="-0.5" y="1.95" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R270"/>
+<smd name="20" x="-1" y="1.95" dx="0.81" dy="0.27" layer="1" roundness="50" rot="R270"/>
+<smd name="21" x="0" y="0" dx="2.7" dy="2.7" layer="1" cream="no"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SI5351B-B-GM">
+<wire x1="-10.16" y1="22.86" x2="10.16" y2="22.86" width="0.254" layer="94"/>
+<wire x1="10.16" y1="22.86" x2="10.16" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-22.86" x2="-10.16" y2="-22.86" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-22.86" x2="-10.16" y2="22.86" width="0.254" layer="94"/>
+<text x="-10.16" y="23.495" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-25.4" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="XA" x="-15.24" y="5.08" length="middle" direction="in"/>
+<pin name="XB" x="-15.24" y="2.54" length="middle" direction="in"/>
+<pin name="CLK0" x="15.24" y="5.08" length="middle" direction="out" rot="R180"/>
+<pin name="VC" x="-15.24" y="-15.24" length="middle" direction="in"/>
+<pin name="SCL" x="-15.24" y="-2.54" length="middle" direction="in" function="clk"/>
+<pin name="SDA" x="-15.24" y="-5.08" length="middle"/>
+<pin name="SSEN" x="-15.24" y="-7.62" length="middle" direction="in"/>
+<pin name="OEB" x="-15.24" y="-12.7" length="middle" direction="in"/>
+<pin name="VDD" x="15.24" y="20.32" length="middle" direction="pwr" rot="R180"/>
+<pin name="VDDOA" x="15.24" y="17.78" length="middle" direction="pwr" rot="R180"/>
+<pin name="VDDOB" x="15.24" y="15.24" length="middle" direction="pwr" rot="R180"/>
+<pin name="VDDOC" x="15.24" y="12.7" length="middle" direction="pwr" rot="R180"/>
+<pin name="VDDOD" x="15.24" y="10.16" length="middle" direction="pwr" rot="R180"/>
+<pin name="CLK1" x="15.24" y="2.54" length="middle" direction="out" rot="R180"/>
+<pin name="CLK2" x="15.24" y="0" length="middle" direction="out" rot="R180"/>
+<pin name="CLK3" x="15.24" y="-2.54" length="middle" direction="out" rot="R180"/>
+<pin name="CLK4" x="15.24" y="-5.08" length="middle" direction="out" rot="R180"/>
+<pin name="CLK5" x="15.24" y="-7.62" length="middle" direction="out" rot="R180"/>
+<pin name="CLK6" x="15.24" y="-10.16" length="middle" direction="out" rot="R180"/>
+<pin name="CLK7" x="15.24" y="-12.7" length="middle" direction="out" rot="R180"/>
+<pin name="GND" x="15.24" y="-20.32" length="middle" direction="pwr" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SI5351B-B-GM" prefix="U">
+<description>Programmable PLL Clock Generator Single 0.0025MHz to 200MHz 20-Pin QFN Bulk</description>
+<gates>
+<gate name="G$1" symbol="SI5351B-B-GM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="QFN50P400X400X90-21N">
+<connects>
+<connect gate="G$1" pin="CLK0" pad="13"/>
+<connect gate="G$1" pin="CLK1" pad="12"/>
+<connect gate="G$1" pin="CLK2" pad="9"/>
+<connect gate="G$1" pin="CLK3" pad="8"/>
+<connect gate="G$1" pin="CLK4" pad="19"/>
+<connect gate="G$1" pin="CLK5" pad="17"/>
+<connect gate="G$1" pin="CLK6" pad="16"/>
+<connect gate="G$1" pin="CLK7" pad="15"/>
+<connect gate="G$1" pin="GND" pad="21"/>
+<connect gate="G$1" pin="OEB" pad="7"/>
+<connect gate="G$1" pin="SCL" pad="4"/>
+<connect gate="G$1" pin="SDA" pad="5"/>
+<connect gate="G$1" pin="SSEN" pad="6"/>
+<connect gate="G$1" pin="VC" pad="3"/>
+<connect gate="G$1" pin="VDD" pad="20"/>
+<connect gate="G$1" pin="VDDOA" pad="11"/>
+<connect gate="G$1" pin="VDDOB" pad="10"/>
+<connect gate="G$1" pin="VDDOC" pad="18"/>
+<connect gate="G$1" pin="VDDOD" pad="14"/>
+<connect gate="G$1" pin="XA" pad="1"/>
+<connect gate="G$1" pin="XB" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="AVAILABILITY" value="Unavailable"/>
+<attribute name="DESCRIPTION" value=" IC CLK GENERATOR 200MHZ 20QFN "/>
+<attribute name="MF" value="Silicon Labs"/>
+<attribute name="MP" value="SI5351B-B-GM"/>
+<attribute name="PACKAGE" value="QFN-20 Silicon Labs"/>
+<attribute name="PRICE" value="None"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4186,6 +4313,7 @@ Footprint with angle programming connector</description>
 <part name="INPUT" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="POWER_JACK" device="PTH_SMD_COMBO" package3d_urn="urn:adsk.eagle:package:38223/1"/>
 <part name="ANT1" library="discrete" library_urn="urn:adsk.eagle:library:211" deviceset="ANTENNA" device="" package3d_urn="urn:adsk.eagle:package:12928/1"/>
 <part name="M2" library="diy-modules" deviceset="ARDUINO-PRO-MINI-*#APC" device="" technology="3.3V"/>
+<part name="U1" library="SI5351B-B-GM" deviceset="SI5351B-B-GM" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4247,9 +4375,13 @@ Footprint with angle programming connector</description>
 <attribute name="NAME" x="111.76" y="72.39" size="1.778" layer="95"/>
 <attribute name="VALUE" x="116.84" y="66.04" size="1.778" layer="96"/>
 </instance>
-<instance part="M2" gate="G$1" x="30.48" y="-22.86" smashed="yes">
-<attribute name="NAME" x="45.72" y="5.08" size="1.778" layer="95"/>
-<attribute name="VALUE" x="45.72" y="2.54" size="1.778" layer="96"/>
+<instance part="M2" gate="G$1" x="17.78" y="-33.02" smashed="yes">
+<attribute name="NAME" x="-5.08" y="-5.08" size="1.778" layer="95"/>
+<attribute name="VALUE" x="5.08" y="0" size="1.778" layer="96"/>
+</instance>
+<instance part="U1" gate="G$1" x="104.14" y="-33.02" smashed="yes">
+<attribute name="NAME" x="93.98" y="-9.525" size="1.778" layer="95"/>
+<attribute name="VALUE" x="93.98" y="-58.42" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -4275,6 +4407,12 @@ Footprint with angle programming connector</description>
 <pinref part="ANT1" gate="A" pin="1"/>
 <wire x1="114.3" y1="66.04" x2="114.3" y2="55.88" width="0.1524" layer="91"/>
 <junction x="114.3" y="55.88"/>
+<pinref part="U1" gate="G$1" pin="CLK0"/>
+<wire x1="119.38" y1="-27.94" x2="132.08" y2="-27.94" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="-27.94" x2="132.08" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="5.08" x2="73.66" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="5.08" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
+<junction x="73.66" y="50.8"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -4330,6 +4468,11 @@ Footprint with angle programming connector</description>
 <pinref part="INPUT" gate="G$1" pin="PWR"/>
 <wire x1="2.54" y1="27.94" x2="2.54" y2="35.56" width="0.1524" layer="91"/>
 <junction x="2.54" y="35.56"/>
+<pinref part="U1" gate="G$1" pin="GND"/>
+<wire x1="119.38" y1="-53.34" x2="147.32" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="-53.34" x2="147.32" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="147.32" y1="35.56" x2="114.3" y2="35.56" width="0.1524" layer="91"/>
+<junction x="114.3" y="35.56"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -4356,6 +4499,24 @@ Footprint with angle programming connector</description>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="17.78" y1="50.8" x2="15.24" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="50.8" x2="15.24" y2="22.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="SDA"/>
+<wire x1="88.9" y1="-38.1" x2="71.12" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="-38.1" x2="71.12" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="M2" gate="G$1" pin="A4"/>
+<wire x1="71.12" y1="-15.24" x2="35.56" y2="-15.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$8" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="SCL"/>
+<wire x1="88.9" y1="-35.56" x2="73.66" y2="-35.56" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="-35.56" x2="73.66" y2="-12.7" width="0.1524" layer="91"/>
+<pinref part="M2" gate="G$1" pin="A5"/>
+<wire x1="73.66" y1="-12.7" x2="35.56" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
