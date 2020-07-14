@@ -4719,7 +4719,7 @@ Datasheet (EC16PHBF-B-20F-24-24C-16Y)</description>
 </part>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CX" device="XC10B6" package3d_urn="urn:adsk.eagle:package:23700/1" value="10nF"/>
-<part name="S1" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="ENCODER" device="" package3d_urn="urn:adsk.eagle:package:40145/1"/>
+<part name="RE" library="SparkFun-Switches" library_urn="urn:adsk.eagle:library:535" deviceset="ENCODER" device="" package3d_urn="urn:adsk.eagle:package:40145/1"/>
 <part name="SW1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="SWITCH_PUSHBUTTON" device="C&amp;K_KSS" package3d_urn="urn:adsk.eagle:package:6240958/1"/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="VCC" device="">
 <attribute name="TR_VCC" value="3.3V"/>
@@ -4730,6 +4730,8 @@ Datasheet (EC16PHBF-B-20F-24-24C-16Y)</description>
 <sheets>
 <sheet>
 <plain>
+<text x="-40.64" y="-58.42" size="1.778" layer="91">Step switch</text>
+<text x="-53.34" y="-27.94" size="1.778" layer="91">Encoder</text>
 </plain>
 <instances>
 <instance part="M2" gate="G$1" x="17.78" y="-33.02" smashed="yes">
@@ -4806,7 +4808,7 @@ Datasheet (EC16PHBF-B-20F-24-24C-16Y)</description>
 <attribute name="NAME" x="77.724" y="25.781" size="1.778" layer="95"/>
 <attribute name="VALUE" x="85.344" y="23.241" size="1.778" layer="96"/>
 </instance>
-<instance part="S1" gate="G$1" x="-35.56" y="-33.02" smashed="yes">
+<instance part="RE" gate="G$1" x="-35.56" y="-33.02" smashed="yes">
 <attribute name="NAME" x="-40.64" y="-22.606" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="-40.64" y="-43.434" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
@@ -4924,7 +4926,7 @@ Datasheet (EC16PHBF-B-20F-24-24C-16Y)</description>
 <junction x="73.66" y="-63.5"/>
 <pinref part="SW1" gate="G$1" pin="P$1"/>
 <wire x1="-40.64" y1="-53.34" x2="-50.8" y2="-53.34" width="0.1524" layer="91"/>
-<pinref part="S1" gate="G$1" pin="C"/>
+<pinref part="RE" gate="G$1" pin="C"/>
 <wire x1="-50.8" y1="-53.34" x2="-50.8" y2="-33.02" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="-33.02" x2="-45.72" y2="-33.02" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="-53.34" x2="-50.8" y2="-68.58" width="0.1524" layer="91"/>
@@ -5017,7 +5019,7 @@ Datasheet (EC16PHBF-B-20F-24-24C-16Y)</description>
 <segment>
 <pinref part="M2" gate="G$1" pin="D2"/>
 <wire x1="0" y1="-30.48" x2="-25.4" y2="-30.48" width="0.1524" layer="91"/>
-<pinref part="S1" gate="G$1" pin="A"/>
+<pinref part="RE" gate="G$1" pin="A"/>
 <wire x1="-25.4" y1="-30.48" x2="-25.4" y2="-25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -5025,7 +5027,7 @@ Datasheet (EC16PHBF-B-20F-24-24C-16Y)</description>
 <segment>
 <pinref part="M2" gate="G$1" pin="D3"/>
 <wire x1="0" y1="-33.02" x2="-25.4" y2="-33.02" width="0.1524" layer="91"/>
-<pinref part="S1" gate="G$1" pin="B"/>
+<pinref part="RE" gate="G$1" pin="B"/>
 <wire x1="-25.4" y1="-33.02" x2="-25.4" y2="-40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
