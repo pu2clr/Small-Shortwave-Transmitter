@@ -17,9 +17,24 @@
  * For SI5351 control, this sketch uses the the Etherkit/si5351 Arduino library from Jason Milldrum (https://github.com/etherkit/Si5351Arduino);
  * For encoder control, this sketch uses the Rotary Encoder Class implementation from Ben Buxton (the source code is included together with this sketch)
  * 
- * See on https://github.com/etherkit/Si5351Arduino  and know how to calibrate your Si5351
- * See also the example Etherkit/si5251_calibration
- * Author: Ricardo Lima Caratti (PU2CLR) -   2020
+ * Arduino Pro Mini 3.3V (8MHz) and SI5351 breakout wire up
+ *
+ * | Device name        | Device Pin / Description  |  Arduino Pin  |
+ * | ----------------   | --------------------      | ------------  |
+ * |   OLED             |                           |               |
+ * |                    | SDA                       |     A4        |
+ * |                    | SCL                       |     A5        |
+ * |   SI5351           |                           |               |
+ * |                    | SDIO (pin 18)             |     A4        |
+ * |                    | SCLK (pin 17)             |     A5        |
+ * |   Button           |                           |               |
+ * |                    | Step Switch               |      4        |
+ * |   Encoder          |                           |               |
+ * |                    | A                         |      2        |
+ * |                    | B                         |      3        |
+ * 
+ * See https://github.com/etherkit/Si5351Arduino  and know how to calibrate your Si5351
+ * Author: Ricardo Lima Caratti 2020
 */
 
 #include <si5351.h>
@@ -171,7 +186,6 @@ void changeFreq(int direction)
   isFreqChanged = true;
 }
 
-
 void loop()
 {
   // Check if the encoder has moved.
@@ -185,9 +199,7 @@ void loop()
   }
 
   if (digitalRead(BUTTON_STEP) == LOW)
-  {
     currentStep = (currentStep < lastStepBFO) ? (currentStep + 1) : 0;
-  }
 
   if (isFreqChanged)
   {
