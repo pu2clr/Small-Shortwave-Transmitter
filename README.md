@@ -34,5 +34,24 @@ The list below shows the Arduino Libraries I have developed to control DSP recei
 
 ## Schematic 
 
+The schematic below is based on [Stefan0719](https://youtu.be/7fe_GlJI5WI) and can be used with crystal oscillator. Use it if you want to work with a static frequency (8MHz, 12MHz, 13.56MHz etc).
+
+![Crystal Sortwave transmitter - Basic Schematic](extras/images/schematic_transmitter_crystal.png)
 
 
+If you intend to work with ramdom frequencies between 3 and 30 MHz, use the following circuit.
+
+
+![SI5351 Sortwave transmitter - Basic Schematic](extras/images/schematic_transmitter_crystal.png)
+
+
+The sketch for the circuit above can be found [here](source)
+
+
+## References
+
+1. [Original Project Schematic](https://drive.google.com/file/d/1N3GuQzIK2YmYvO7QV10ZkjJ2dLMs-szc/view)
+2. [Simple shortwave transmitter](https://youtu.be/7fe_GlJI5WI)
+3. [DIY Simple Short Wave Transmitter With XTAL Oscillator Steady Frequency](https://youtu.be/4UGzL5FCcMM)
+4. [13.56Mhz shortwave transmitter](https://youtu.be/VYizasHR564)
+5. 
