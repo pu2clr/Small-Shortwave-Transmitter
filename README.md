@@ -5,13 +5,12 @@
 This project is about a shortwave trasmitter with SI5351 oscillator from Silicon Labs controlled by Arduino. Also, you can use it with a crystal oscillator. Is this case, you will not need the SI5351 devive and Arduino. 
 
 
-
 ## Content
 
-1. [Preface]()
-2. [Schematic]()
-3. [Arduino Sketch]()
-4. [References]()
+1. [Preface](https://github.com/pu2clr/shortwave_arduino_trasmitter#preface)
+2. [Schematic](https://github.com/pu2clr/shortwave_arduino_trasmitter#schematic)
+3. [Arduino Sketch](https://github.com/pu2clr/shortwave_arduino_trasmitter/tree/master/source)
+4. [References](https://github.com/pu2clr/shortwave_arduino_trasmitter#references)
 
 
 ## Preface 
