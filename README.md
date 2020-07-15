@@ -17,8 +17,7 @@ This project is about a shortwave trasmitter with SI5351 oscillator from Silicon
 
 Recently I have been developing some Arduino libraries to control DSP receivers. The main motivation for building this shortwave transmitter is to be able to do experiments and tests during the development of the Arduino libraries for the SI473X, Si4844, AKC695X, KT0915 and others. My current location does not allow good shortwave broadcast reception most of the time. In this case, a small Shortwave (3 ~ 30 MHz) transmitter can be a good tool.   
 
-This project is originally based  on the [Stefan0719](https://youtu.be/7fe_GlJI5WI) project that uses a crystal oscillator. Instead of a crystal oscillator, this project uses a SI5351 signal generator that can be controlled by Arduino. The idea is to be able to transmit on any frequency in the HF band (3 ˜ 30 MHz).
-
+This project is originally based  on the [Stefan0719](https://youtu.be/7fe_GlJI5WI) project that uses a crystal oscillator. Instead of a crystal oscillator, this project uses a SI5351 signal generator that can be controlled by Arduino. The idea is to be able to transmit on any frequency in the HF band (3 ˜ 30 MHz). See video below.
 
 {% include video01.html %} 
 
