@@ -1,6 +1,5 @@
 # Shortwave Arduino Transmiter
 
-## IT IS UNDER CONSTRUCTION...
 
 This project is about a shortwave trasmitter with SI5351 oscillator from Silicon Labs controlled by Arduino. Also, you can use it with a crystal oscillator. Is this case, you will not need the SI5351 devive and Arduino. 
 
@@ -11,7 +10,6 @@ This project is about a shortwave trasmitter with SI5351 oscillator from Silicon
 2. [Schematic](https://pu2clr.github.io/Small-Shortwave-Transmitter/#schematic)
 3. [Arduino Sketch](source)
 4. [References](https://pu2clr.github.io/Small-Shortwave-Transmitter/#references)
-
 
 ## Preface 
 
@@ -43,7 +41,6 @@ The schematic below is based on [Stefan0719](https://youtu.be/7fe_GlJI5WI) and c
 
 If you intend to work with random frequencies between 3 and 30 MHz, use the following circuit.
 
-__UNDER CONSTRUCTION...__
 
 ![SI5351 Sortwave transmitter - Basic Schematic](extras/images/schematic_transmitter_si5351.png)
 
