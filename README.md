@@ -7,7 +7,7 @@ This project is about a shortwave trasmitter with SI5351 oscillator from Silicon
 
 ## Content
 
-1. [Preface](https://github.com/pu2clr/shortwave_arduino_trasmitter#preface)
+1. [Preface](https://github.com/pu2clr/shortwave-arduino_trasmitter#preface)
 2. [Schematic](https://github.com/pu2clr/shortwave_arduino_trasmitter#schematic)
 3. [Arduino Sketch](https://github.com/pu2clr/shortwave_arduino_trasmitter/tree/master/source)
 4. [References](https://github.com/pu2clr/shortwave_arduino_trasmitter#references)
