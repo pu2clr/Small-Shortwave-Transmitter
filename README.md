@@ -72,6 +72,25 @@ If you intend to work with random frequencies between 3 and 30 MHz or other rang
 The sketch for the circuit above can be found [here](source)
 
 
+## Photos
+
+
+![Photo 01](extras/images/photo_02_transmitter.png)
+
+
+![Photo 02](extras/images/photo_03_transmitter.png)
+
+
+![Photo 03](extras/images/photo_04_dds.png)
+
+
+![Photo 04](extras/images/photo_05_dds.png)
+
+
+![Photo 05](extras/images/photo_06_crystals.png)
+
+
+
 ## References
 
 1. [Original Project Schematic](https://drive.google.com/file/d/1N3GuQzIK2YmYvO7QV10ZkjJ2dLMs-szc/view)
