@@ -20,6 +20,9 @@ Recently I have been developing some Arduino libraries to control DSP receivers.
 This project is originally based  on the [Stefan0719](https://youtu.be/7fe_GlJI5WI) project that uses a crystal oscillator. Instead of a crystal oscillator, this project uses a SI5351 signal generator that can be controlled by Arduino. The idea is to be able to transmit on any frequency in the HF band (3 ˜ 30 MHz).
 
 
+Video about this project
+{% video01.html %}
+
 
 ### See also
 
