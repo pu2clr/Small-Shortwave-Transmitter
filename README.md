@@ -1,7 +1,7 @@
 # Shortwave Arduino Transmiter
 
 
-This project is about a shortwave trasmitter from 3 to 30 MHz. It uses the SI5351 oscillator from Silicon Labs controlled by Arduino. Also, you can use it with a crystal oscillator. Is this case, you will not need the SI5351 devive and Arduino. 
+This project is about a shortwave trasmitter from 3 MHz to 30 MHz. It uses the SI5351 oscillator from Silicon Labs controlled by Arduino. Also, you can use it with a crystal oscillator. In this case, you will not need the SI5351 devive and Arduino. 
 
 The software developed for this project can be freely distributed using the [MIT Free Software model](https://pu2clr.github.io/Small-Shortwave-Transmitter/#prefacemit-license).
 
@@ -13,9 +13,10 @@ Be a member of Facebook group [DSP receivers for hobbyists](https://www.facebook
 ## Content
 
 1. [Preface](https://pu2clr.github.io/Small-Shortwave-Transmitter#preface)
-2. [Schematic](https://pu2clr.github.io/Small-Shortwave-Transmitter/#schematic)
-3. [Arduino Sketch](source)
-4. [References](https://pu2clr.github.io/Small-Shortwave-Transmitter/#references)
+2. [Your support is important](https://pu2clr.github.io/Small-Shortwave-Transmitter#your-support-is-important)
+3. [Schematic](https://pu2clr.github.io/Small-Shortwave-Transmitter/#schematic)
+4. [Arduino Sketch](source)
+5. [References](https://pu2clr.github.io/Small-Shortwave-Transmitter/#references)
 
 ## Preface 
 
