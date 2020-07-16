@@ -22,7 +22,7 @@ Be a member of Facebook group [DSP receivers for hobbyists](https://www.facebook
 
 Recently I have been developing some Arduino libraries to control DSP receivers. The main motivation for building this shortwave transmitter is to be able to do experiments and tests during the development of the Arduino libraries for the SI473X, Si4844, AKC695X, KT0915 and others. My current location does not allow good shortwave broadcast reception most of the time. In this case, a small Shortwave (3 ~ 30 MHz) transmitter can be a good tool.  __Actually you can experiment other frequencies. If you intend to use the SI5351 oscillator version, you can modify the [Arduino sketch](https://github.com/pu2clr/Small-Shortwave-Transmitter/tree/master/source) and change that range__.
 
-This project is originally based  on the [Stefan0719](https://youtu.be/7fe_GlJI5WI) project that uses a crystal oscillator. Instead of a crystal oscillator, this project also allows you to use a SI5351 signal generator that can be controlled by Arduino. The main idea is to be able to transmit on any frequency in the HF band (3 ˜ 30 MHz). As mentioned earlier, you can try other frequency ranges if you want. See video below.
+This project is originally based  on the [Stefan0719](https://youtu.be/7fe_GlJI5WI) and [SIMPLEST SHORTWAVE TRANSMITTER CIRCUIT EVER](https://www.circuitsdiy.com/simple-shortwave-transmitter-circuit/) projects that use crystal oscillator or ceramic resonator. Instead of a static oscillator, this project also allows you to use a SI5351 signal generator that can be controlled by Arduino. The main idea is to be able to transmit on any frequency in the HF band (3 ˜ 30 MHz). As mentioned earlier, you can try other frequency ranges if you want. See video below.
 
 {% include video01.html %} 
 
@@ -63,6 +63,12 @@ The schematic below is based on [Stefan0719](https://youtu.be/7fe_GlJI5WI) and c
 ![Crystal Sortwave transmitter - Basic Schematic](extras/images/schematic_transmitter_crystal.png)
 
 
+The schematic below is based on [SIMPLEST SHORTWAVE TRANSMITTER CIRCUIT EVER](https://www.circuitsdiy.com/simple-shortwave-transmitter-circuit/) project and can be used with crystal oscillator. Use it if you want to work with a static frequency (8MHz, 12MHz, 13.56MHz etc).
+
+
+![Crystal Sortwave transmitter - Basic Schematic](extras/images/schematic_transmitter_crystal_bc548.png)
+
+
 If you intend to work with random frequencies between 3 and 30 MHz or other ranges, use the following circuit. 
 
 
@@ -95,9 +101,10 @@ The sketch for the circuit above can be found [here](source)
 
 1. [Original Project Schematic](https://drive.google.com/file/d/1N3GuQzIK2YmYvO7QV10ZkjJ2dLMs-szc/view)
 2. [Simple shortwave transmitter](https://youtu.be/7fe_GlJI5WI)
-3. [DIY Simple Short Wave Transmitter With XTAL Oscillator Steady Frequency](https://youtu.be/4UGzL5FCcMM)
-4. [13.56Mhz shortwave transmitter](https://youtu.be/VYizasHR564)
-5. [A DDS VFO for Codan Transceivers](https://www.qsl.net/zl1bpu/PROJ/ddsvfo.htm)
-6. [Replacing Crystal Oscillator with DDS](https://electronics.stackexchange.com/questions/139421/replacing-crystal-oscillator-with-dds)
-7. [A Technical Tutorialon Digital Signal Synthesis](https://www.analog.com/media/cn/training-seminars/tutorials/450968421DDS_Tutorial_rev12-2-99.pdf)
+3. [SIMPLEST SHORTWAVE TRANSMITTER CIRCUIT EVER](https://www.circuitsdiy.com/simple-shortwave-transmitter-circuit/)
+4. [DIY Simple Short Wave Transmitter With XTAL Oscillator Steady Frequency](https://youtu.be/4UGzL5FCcMM)
+5. [13.56Mhz shortwave transmitter](https://youtu.be/VYizasHR564)
+6. [A DDS VFO for Codan Transceivers](https://www.qsl.net/zl1bpu/PROJ/ddsvfo.htm)
+7. [Replacing Crystal Oscillator with DDS](https://electronics.stackexchange.com/questions/139421/replacing-crystal-oscillator-with-dds)
+8. [A Technical Tutorialon Digital Signal Synthesis](https://www.analog.com/media/cn/training-seminars/tutorials/450968421DDS_Tutorial_rev12-2-99.pdf)
    
