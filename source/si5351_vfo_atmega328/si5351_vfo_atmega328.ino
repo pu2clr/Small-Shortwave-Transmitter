@@ -1,40 +1,40 @@
 
 /**
- * VFO based on SI5351 DDS controlled by Arduino.
- * 
- * This VFO is part of a very small shortwave transmitter.  
- * The idea is to be able to transmit on any frequency in the HF band (3 ˜ 30 MHz). 
- * The main motivation for building this shortwave transmitter is to be able to do experiments and 
- * tests during the development of the Arduino libraries for DSP receivers based on SI473X, Si4844, AKC695X, KT0915 and others.
- * This was necessary due to the location of the author of these libraries does not allow  good reception  of 
- * shortwave broadcast stations most of the time. 
- * 
- * [PU2CLR Si4735 Library for Arduino](https://pu2clr.github.io/SI4735/). This library was built based on “Si47XX PROGRAMMING GUIDE; AN332” and it has support to FM, AM and SSB modes (LW, MW and SW). It also can be used on all members of the SI47XX family respecting, of course, the features available for each IC version;
- * [PU2CLR SI4844 Arduino Library](https://github.com/pu2clr/SI4844). This is an Arduino library for the SI4844, BROADCAST ANALOG TUNING DIGITAL DISPLAY AM/FM/SW RADIO RECEIVER,  IC from Silicon Labs.  It is available on Arduino IDE. This library is intended to provide an easier interface for controlling the SI4844.
- * [PU2CLR AKC695X Arduino Library](https://pu2clr.github.io/AKC695X/). The AKC695X is a family of IC DSP receiver from AKC technology. The AKC6955 and AKC6959sx support AM and FM modes. On AM mode the AKC6955 and AKC6959sx work on LW, MW and SW. On FM mode they work from 64MHz to 222MHz.
- * [PU2CLR KT0915 Arduino Library](https://pu2clr.github.io/KT0915/). The KT0915 is a full band AM (LW, MW and SW) and FM DSP receiver that can provide you a easy way to build a high quality radio with low cost.
- * 
- * For SI5351 control, this sketch uses the the Etherkit/si5351 Arduino library from Jason Milldrum (https://github.com/etherkit/Si5351Arduino);
- * For encoder control, this sketch uses the Rotary Encoder Class implementation from Ben Buxton (the source code is included together with this sketch)
- * 
- * Arduino Pro Mini 3.3V (8MHz) and SI5351 breakout wire up
- *
- * | Device name        | Device Pin / Description  |  Arduino Pin  |
- * | ----------------   | --------------------      | ------------  |
- * |   OLED             |                           |               |
- * |                    | SDA                       |     A4        |
- * |                    | SCL                       |     A5        |
- * |   SI5351           |                           |               |
- * |                    | SDIO (pin 18)             |     A4        |
- * |                    | SCLK (pin 17)             |     A5        |
- * |   Button           |                           |               |
- * |                    | Step Switch               |      4        |
- * |   Encoder          |                           |               |
- * |                    | A                         |      2        |
- * |                    | B                         |      3        |
- * 
- * See https://github.com/etherkit/Si5351Arduino  and know how to calibrate your Si5351
- * Author: Ricardo Lima Caratti 2020
+   VFO based on SI5351 DDS controlled by Arduino.
+
+   This VFO is part of a very small shortwave transmitter.
+   The idea is to be able to transmit on any frequency in the HF band (3 ˜ 30 MHz).
+   The main motivation for building this shortwave transmitter is to be able to do experiments and
+   tests during the development of the Arduino libraries for DSP receivers based on SI473X, Si4844, AKC695X, KT0915 and others.
+   This was necessary due to the location of the author of these libraries does not allow  good reception  of
+   shortwave broadcast stations most of the time.
+
+   [PU2CLR Si4735 Library for Arduino](https://pu2clr.github.io/SI4735/). This library was built based on “Si47XX PROGRAMMING GUIDE; AN332” and it has support to FM, AM and SSB modes (LW, MW and SW). It also can be used on all members of the SI47XX family respecting, of course, the features available for each IC version;
+   [PU2CLR SI4844 Arduino Library](https://github.com/pu2clr/SI4844). This is an Arduino library for the SI4844, BROADCAST ANALOG TUNING DIGITAL DISPLAY AM/FM/SW RADIO RECEIVER,  IC from Silicon Labs.  It is available on Arduino IDE. This library is intended to provide an easier interface for controlling the SI4844.
+   [PU2CLR AKC695X Arduino Library](https://pu2clr.github.io/AKC695X/). The AKC695X is a family of IC DSP receiver from AKC technology. The AKC6955 and AKC6959sx support AM and FM modes. On AM mode the AKC6955 and AKC6959sx work on LW, MW and SW. On FM mode they work from 64MHz to 222MHz.
+   [PU2CLR KT0915 Arduino Library](https://pu2clr.github.io/KT0915/). The KT0915 is a full band AM (LW, MW and SW) and FM DSP receiver that can provide you a easy way to build a high quality radio with low cost.
+
+   For SI5351 control, this sketch uses the the Etherkit/si5351 Arduino library from Jason Milldrum (https://github.com/etherkit/Si5351Arduino);
+   For encoder control, this sketch uses the Rotary Encoder Class implementation from Ben Buxton (the source code is included together with this sketch)
+
+   Arduino Pro Mini 3.3V (8MHz) and SI5351 breakout wire up
+
+   | Device name        | Device Pin / Description  |  Arduino Pin  |
+   | ----------------   | --------------------      | ------------  |
+   |   OLED             |                           |               |
+   |                    | SDA                       |     A4        |
+   |                    | SCL                       |     A5        |
+   |   SI5351           |                           |               |
+   |                    | SDIO (pin 18)             |     A4        |
+   |                    | SCLK (pin 17)             |     A5        |
+   |   Button           |                           |               |
+   |                    | Step Switch               |      4        |
+   |   Encoder          |                           |               |
+   |                    | A                         |      3        |
+   |                    | B                         |      2        |
+
+   See https://github.com/etherkit/Si5351Arduino  and know how to calibrate your Si5351
+   Author: Ricardo Lima Caratti 2020
 */
 
 #include <si5351.h>
@@ -44,9 +44,14 @@
 #include "SSD1306AsciiAvrI2c.h"
 
 // Enconder PINs
-#define ENCODER_PIN_A 2 // Encoder pin A
-#define ENCODER_PIN_B 3 // Encoder pin B
-#define BUTTON_STEP 4   // ENCODER button or regular push button
+#define ENCODER_PIN_A 3 // Encoder pin A
+#define ENCODER_PIN_B 2 // Encoder pin B
+#define SWITCH_CMD 4   // ENCODER button or regular push button
+#define BUTTON_UP   6   // Button up command
+#define BUTTON_DOWN 5   // Button down command
+
+#define CMD_STEP     0
+#define CMD_FAVORITE 1
 
 // OLED Diaplay constants
 #define I2C_ADDRESS 0x3C
@@ -56,18 +61,10 @@
 #define CORRECTION_FACTOR 80000 // See how to calibrate your Si5351A (0 if you do not want).
 
 // VFO range for this project is 3000 KHz to 30000 KHz (3MHz to 30MHz).
-#define DEFAULT_VFO 800000000LU // VFO center frequency
-#define MIN_VFO 300000000LU     // VFO min. frequency 3Mhz
-#define MAX_VFO 3000000000LU    // VFO max. frequency 30MHz
 
-// Encoder controller
-Rotary encoder = Rotary(ENCODER_PIN_A, ENCODER_PIN_B);
+#define MIN_VFO 300000000LLU     // VFO min. frequency 3Mhz
+#define MAX_VFO 3000000000LLU    // VFO max. frequency 30MHz
 
-// OLED - Declaration for a SSD1306 display connected to I2C (SDA, SCL pins)
-SSD1306AsciiAvrI2c display;
-
-// The Si5351 instance.
-Si5351 si5351;
 
 // Struct for step
 typedef struct
@@ -78,19 +75,46 @@ typedef struct
 
 // Steps database. You can change the Steps and numbers of steps here if you need.
 Step step[] = {
-    {"100Hz", 10000}, // Minimum Frequency step (incremente or decrement) 100Hz
-    {"500Hz", 50000},
-    {"1KHz ", 100000},
-    {"5KHz ", 500000}}; // Maximum frequency step 5Khz
+  {(char *) "100Hz ", 10000}, // Minimum Frequency step (incremente or decrement) 100Hz
+  {(char *) "500Hz ", 50000},
+  {(char *) "1KHz  ", 100000},
+  {(char *) "5KHz  ", 500000},
+  {(char *) "10KHz ", 1000000},
+  {(char *) "50KHz ", 5000000},
+  {(char *) "500KHz", 50000000}
+}; // Maximum frequency step 500KHz
 
 // Calculate the index of last position of step[] array
 const int lastStepVFO = (sizeof step / sizeof(Step)) - 1;
-volatile long currentStep = 0;
+int currentStep = 4;
+
+
+// Your favotite frequencies
+uint64_t favorite[] = { 350000000LLU, 720500000LLU, 800000000LLU, 1070000000LLU,
+                        1350000000LLU, 1600000000LLU, 2000000000LLU, 2400000000LLU,
+                        2700000000LLU, 2800000000LLU, 2800000000LLU
+                      };
+const int lastFavorite = (sizeof favorite / sizeof(uint64_t) ) - 1;
+int currentFavorite = 3;
+
+byte currentCommand = CMD_STEP;
+
+// Encoder controller
+Rotary encoder = Rotary(ENCODER_PIN_A, ENCODER_PIN_B);
+
+// OLED - Declaration for a SSD1306 display connected to I2C (SDA, SCL pins)
+SSD1306AsciiAvrI2c display;
+
+// The Si5351 instance.
+Si5351 si5351;
+
+
+
 
 bool isFreqChanged = true;
 bool clearDisplay = false;
 
-uint64_t vfoFreq = DEFAULT_VFO;
+uint64_t vfoFreq;
 uint64_t vfoLastValue;
 
 // Encoder control variables
@@ -103,19 +127,25 @@ void setup()
   pinMode(ENCODER_PIN_B, INPUT_PULLUP);
   // Si5351 contrtolers pins
 
-  pinMode(BUTTON_STEP, INPUT_PULLUP);
+  pinMode(SWITCH_CMD, INPUT_PULLUP);
+  pinMode(BUTTON_UP,  INPUT_PULLUP);
+  pinMode(BUTTON_DOWN, INPUT_PULLUP);
 
   // Initiating the OLED Display
   display.begin(&Adafruit128x64, I2C_ADDRESS);
   display.setFont(Adafruit5x7);
   display.set2X();
   display.clear();
+  display.setCursor(0, 0);
   display.print("\nShortwave");
   display.print("\nTransmitter");
   display.print("\n\nBY PU2CLR");
 
   delay(3000);
   display.clear();
+
+  vfoFreq = favorite[currentFavorite];
+
   showStatus();
   // Initiating the Signal Generator (si5351)
   si5351.init(SI5351_CRYSTAL_LOAD_8PF, 0, 0);
@@ -160,17 +190,18 @@ void rotaryEncoder()
 void showStatus()
 {
   double vfo = vfoFreq / 100000.0;
-
-  // display.setCursor(0,0)
-  // display.clear();
+  display.setCursor(0, 0);
   display.set2X();
   display.setCursor(0, 0);
-  display.print(" ");
   display.print(vfo);
+  display.set1X();
   display.print(" KHz");
-
-  display.print("\n\nStep: ");
+  display.setCursor(0, 3);
+  display.print("Step: ");
   display.print(step[currentStep].name);
+  display.setCursor(0, 5);
+  display.print("Command: ");
+  display.print((currentCommand == CMD_STEP) ? "STEP" : "FAVORITE");
 }
 
 // Change the frequency (increment or decrement)
@@ -187,6 +218,29 @@ void changeFreq(int direction)
   isFreqChanged = true;
 }
 
+void doCommandUp() {
+  if ( currentCommand == CMD_STEP )
+    currentStep = (currentStep < lastStepVFO) ? (currentStep + 1) : 0;
+  else {
+    currentFavorite = (currentFavorite < lastFavorite) ? (currentFavorite + 1) : 0;
+    vfoFreq = favorite[currentFavorite];
+    isFreqChanged = true;
+  }
+
+  delay(200);
+}
+
+void doCommandDown() {
+  if ( currentCommand == CMD_STEP )
+    currentStep = (currentStep > 0) ? (currentStep - 1) : lastStepVFO;
+  else {
+    currentFavorite = (currentFavorite > 0) ? (currentFavorite - 1) : lastFavorite;
+    vfoFreq = favorite[currentFavorite];
+    isFreqChanged = true;
+  }
+  delay(200);
+}
+
 void loop()
 {
   // Check if the encoder has moved.
@@ -199,8 +253,16 @@ void loop()
     encoderCount = 0;
   }
 
-  if (digitalRead(BUTTON_STEP) == LOW) {
-    currentStep = (currentStep < lastStepVFO) ? (currentStep + 1) : 0;
+  // Switch the current command control (step or favorite frequencies)
+  if (digitalRead(SWITCH_CMD) == LOW) {
+    currentCommand = (currentCommand == CMD_STEP) ? CMD_FAVORITE : CMD_STEP;
+    showStatus();
+    delay(200);
+  } else if (digitalRead(BUTTON_UP) == LOW) {
+    doCommandUp();
+    showStatus();
+  } else if (digitalRead(BUTTON_DOWN) == LOW) {
+    doCommandDown();
     showStatus();
   }
 
