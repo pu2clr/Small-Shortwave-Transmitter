@@ -12,11 +12,11 @@ Be a member of Facebook group [DSP receivers for hobbyists](https://www.facebook
 
 ## Content
 
-1. [Preface](https://pu2clr.github.io/SI5351/#preface)
-2. [Your support is important](https://pu2clr.github.io/SI5351/#your-support-is-important)
-3. [Schematics](https://pu2clr.github.io/SI5351/#schematic)
+1. [Preface](https://pu2clr.github.io/Small-Shortwave-Transmitter/#preface)
+2. [Your support is important](https://pu2clr.github.io/Small-Shortwave-Transmitter/#your-support-is-important)
+3. [Schematics](https://pu2clr.github.io/Small-Shortwave-Transmitter/#schematic)
 4. [Arduino Sketch](source)
-5. [References](https://pu2clr.github.io/SI5351/#references)
+5. [References](https://pu2clr.github.io/Small-Shortwave-Transmitter/#references)
 
 ## Preface 
 
