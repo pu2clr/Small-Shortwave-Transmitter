@@ -51,7 +51,7 @@ The list below shows the Arduino Libraries I have developed to control DSP recei
 Cordova provides an easy way to develop for iOS and Android.  
 * [Band Pass Filter controlled by Arduino](https://pu2clr.github.io/auto_bpf_arduino/). It is a HF band pass filter controlled by Arduino. It is designed for HF receivers. With this project, you can use a set of up to four HF bandpass filters that can be selected by Arduino. To do that you will need just two digital Arduino pins.
 
-## Group
+## Groups
 
 There is a __Facebook__ group called [__Si47XX for Radio Experimenters__](https://www.facebook.com/groups/532613604253401/) where the purpose is exchanging experiences with projects based on Silicon Labs  SI47XX IC family. You will be welcome to the group [Si47XX for Radio Experimenters](https://www.facebook.com/groups/532613604253401/). You can also be a member of __group.io__ [SI47XX for hobbyists](https://groups.io/g/si47xx)
 
