@@ -1,7 +1,7 @@
 # [Shortwave Arduino Transmiter](https://pu2clr.github.io/Small-Shortwave-Transmitter/)
 
 
-This project is about a shortwave trasmitter from 3 MHz to 30 MHz. It uses the SI5351 oscillator from Silicon Labs controlled by Arduino. Also, you can use it with a crystal oscillator. In this case, you will not need the SI5351 devive and Arduino. 
+This project is about a shortwave transmitter from 3 MHz to 30 MHz. It uses the SI5351 oscillator from Silicon Labs controlled by Arduino. Also, you can use it with a crystal oscillator. In this case, you will not need the SI5351 device and Arduino. 
 
 The software developed for this project can be freely distributed using the [MIT Free Software model](https://pu2clr.github.io/Small-Shortwave-Transmitter/#prefacemit-license).
 
